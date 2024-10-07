@@ -1,0 +1,64 @@
+exam_board = "OCR"
+subject = "Computer Science"
+code = "J277"
+
+[[papers]]
+name = "Computer Systems"
+number = 1
+code = "J277/01"
+topics = [1.1, 1.2, 1.3, 1.4, 1.5, 1.6]
+
+[[papers]]
+name = "Computational Thinking, Algorithms and Programming"
+number = 2
+code = "J277/02"
+topics = [2.1, 2.2, 2.3, 2.4, 2.5]
+
+[[topics]]
+title = "Systems Architecture"
+number = 1.1
+
+[[topics]]
+title = "Memory and Storage"
+number = 1.2
+
+[[topics]]
+title = "Computer Networks, Connections and Protocols"
+number = 1.3
+
+[[topics]]
+title = "Network Security"
+number = 1.4
+
+[[topics]]
+title = "Systems Software"
+number = 1.5
+
+[[topics]]
+title = "Ethical, Legal, Cultural and Environmental Impacts of Digital Technology"
+number = 1.6
+
+[[topics]]
+title = "Algorithms"
+number = 2.1
+
+[[topics]]
+title = "Programming Fundamentals"
+number = 2.2
+
+[[topics]]
+title = "Producing Robust Programs"
+number = 2.3
+
+[[topics]]
+title = "Boolean Logic"
+number = 2.4
+
+[[topics]]
+title = "Programming Languages and Integrated Development Environments"
+number = 2.5
+
+
+[style]
+color = "purple"
+colors = ["red", "black", "green", "blue"]
