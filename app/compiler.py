@@ -1,8 +1,15 @@
 from pathlib import Path
 from tomllib import load
 
+from typing import List, Optional
+from typing_extensions import Annotated
+
+from typer import Typer, Argument
+
 from .markdown import convert_to_markdown, get_data
 from .html import render_data
+
+app = Typer(no_args_is_help=True)
 
 def compile(subject, topic):
     subject_folder = Path(subject)
@@ -52,3 +59,26 @@ def compile(subject, topic):
 
     with open(html_output_folder / "{number} {title}.html".format(**topic_config), "w") as f:
         f.write(html_content)
+
+@app.command("topic")
+def compile_topic(
+        subject: Annotated[str, Argument(help="The subject to compile", show_default=False)],
+        topics: Annotated[Optional[List[float]], Argument(help="The topics to compile", show_default="All topics")] = None,
+    ):
+    """
+    Compile the listed topic's source files into HTML and Markdown files.
+    """
+    if topics is None:
+        with open(Path(subject) / "src" / "config.toml", "rb") as f:
+            subject_config = load(f)
+        topics = [topic["number"] for topic in subject_config["topics"] if (Path(subject) / "src" / "{number} {title}".format(**topic) / "config.toml").exists()]
+    for topic in topics:
+        if int(topic) == topic:
+            topic = int(topic)
+        compile(subject, topic)
+
+@app.callback()
+def callback():
+    """
+    Compiles the source files for a subject into HTML and Markdown files.
+    """
