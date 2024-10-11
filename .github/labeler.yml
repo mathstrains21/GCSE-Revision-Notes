@@ -1,14 +1,14 @@
 "Computer Science":
 - changed-files:
-  - any-glob-to-any-file: */Computer Science/**
+  - any-glob-to-any-file: Computer Science/**
 
 "Github Config":
 - changed-files:
-  - any-glob-to-any-file: */.github/**
+  - any-glob-to-any-file: .github/**
 
 "App Code":
 - changed-files:
   - any-glob-to-any-file:
-    - */app/**
-    - */*.py
-    - */requirements.txt
+    - app/**
+    - *.py
+    - requirements.txt
