@@ -41,7 +41,7 @@ jobs:
     - name: Compile Computer Science Notes
       if: contains(github.event.pull_request.labels.*.name, 'Computer Science')
       run: |
-        python main.py "Computer Science"
+        python main.py compile topic "Computer Science"
         git add .
         git commit -m "Compile Computer Science Notes"
     - name: Git Push
