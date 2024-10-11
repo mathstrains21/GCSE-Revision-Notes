@@ -1,12 +1,12 @@
-Computer Science:
+"Computer Science":
 - changed-files:
   - any-glob-to-any-file: */Computer Science/**
 
-Github Config:
+"Github Config":
 - changed-files:
   - any-glob-to-any-file: */.github/**
 
-App Code:
+"App Code":
 - changed-files:
   - any-glob-to-any-file:
     - */app/**
