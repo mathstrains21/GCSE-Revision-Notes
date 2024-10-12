@@ -50,6 +50,12 @@ jobs:
         python main.py compile topic "English Language"
         git add .
         git commit -m "Compile English Language Notes" || exit 0
+    - name: Compile French Notes
+      if: contains(github.event.pull_request.labels.*.name, 'French') || contains(github.event.pull_request.labels.*.name, 'App Code')
+      run: |
+        python main.py compile topic "French"
+        git add .
+        git commit -m "Compile French Notes" || exit 0
     - name: Compile Maths Notes
       if: contains(github.event.pull_request.labels.*.name, 'Maths') || contains(github.event.pull_request.labels.*.name, 'App Code')
       run: |

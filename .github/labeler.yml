@@ -17,6 +17,10 @@
 - changed-files:
   - any-glob-to-any-file: English Language/**
 
+"French":
+- changed-files:
+  - any-glob-to-any-file: French/**
+
 "Maths":
 - changed-files:
   - any-glob-to-any-file: Maths/**

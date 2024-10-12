@@ -1,0 +1,59 @@
+exam_board = "Edexcel GCSE"
+subject = "French"
+code = "1FR0"
+
+[[papers]]
+name = "Listening and Understanding"
+number = 1
+code = "1FR0/1H"
+topics = [1, 2, 3, 4, 5, 6, 7, 8]
+
+[[papers]]
+name = "Speaking"
+number = 2
+code = "1FR0/2H"
+topics = [1, 2, 3, 4, 5, 6, 7, 8]
+
+[[papers]]
+name = "Reading and Understanding"
+number = 3
+code = "1FR0/3H"
+topics = [1, 2, 3, 4, 5, 6, 7, 8]
+
+[[papers]]
+name = "Writing"
+number = 4
+code = "1FR0/4H"
+topics = [1, 2, 3, 4, 5, 6, 7, 8]
+
+[[topics]]
+title = "Qui suis-je?"
+number = 1
+
+[[topics]]
+title = "Le temps de loisirs"
+number = 2
+
+[[topics]]
+title = "Jours ordinaires, jours de fête"
+number = 3
+
+[[topics]]
+title = "De la ville à la campagne"
+number = 4
+
+[[topics]]
+title = "Le grand large ..."
+number = 5
+
+[[topics]]
+title = "Au collège"
+number = 6
+
+[[topics]]
+title = "Bon travail!"
+number = 7
+
+[[topics]]
+title = "Un œil sur le monde"
+number = 8
