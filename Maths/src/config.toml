@@ -1,0 +1,37 @@
+exam_board = "Edexcel IGCSE"
+subject = "Mathematics A"
+code = "4MA1"
+
+[[papers]]
+number = 1
+code = "4MA1/1H"
+topics = [1, 2, 3, 4, 5, 6]
+
+[[papers]]
+number = 2
+code = "4MA1/2H"
+topics = [1, 2, 3, 4, 5, 6]
+
+[[topics]]
+title = "Numbers and the Number System"
+number = 1
+
+[[topics]]
+title = "Equations, Formulae and Identities"
+number = 2
+
+[[topics]]
+title = "Sequences, Functions and Graphs"
+number = 3
+
+[[topics]]
+title = "Geometry and Trigonometry"
+number = 4
+
+[[topics]]
+title = "Vectors and Transformation Geometry"
+number = 5
+
+[[topics]]
+title = "Statistics and Probability"
+number = 6
