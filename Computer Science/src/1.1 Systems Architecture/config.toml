@@ -1,0 +1,14 @@
+title = "Systems Architecture"
+number = 1.1
+
+[[subtopics]]
+title = "Architecture of the CPU"
+number = 1
+
+[[subtopics]]
+title = "CPU Performance"
+number = 2
+
+[[subtopics]]
+title = "Embedded Systems"
+number = 3

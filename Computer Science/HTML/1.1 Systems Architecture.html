@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>1.1 Systems Architecture - Computer Science</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container mt-3">
+            
+                
+                    <h1>Systems Architecture</h1>
+                
+            
+                
+                    <h2>Architecture of the CPU</h2>
+                
+            
+                
+                    <p>The CPU is the brain of the computer. It processes the data and instructions that make a computer work.</p>
+                
+            
+                
+                    <p>Most CPU's use the Von Neumann architecture, designed in 1945. The CPU runs programs stored in memory. Programs consist of instructions and data, stored in memory addresses. Only one memory is used, to store both the data and the instructions.</p>
+                
+            
+                
+                    <h3>Fetch-Execute Cycle</h3>
+                
+            
+                
+                    <table class="table table-hover">
+    <thead>
+        <tr>
+            
+                <th>Step</th>
+            
+                <th>Actions</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        
+            <tr>
+                
+                    <td>Fetch</td>
+                
+                    <td><ol><li>The memory address is copied from the program counter to the MAR</li> <li>The instruction in the MAR is copied to the MDR</li> <li>The program counter is incremented to point to the address of the next instruction, ready for the next cycle</li></ol></td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td>Decode</td>
+                
+                    <td><ol><li>The instruction in the MDR is decoded by the CU</li> <li>The CU can get ready for the next step by loading values into the MAR or the MDR</li></ol></td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td>Execute</td>
+                
+                    <td><ol><li>The instruction is performed</li><li>This could be loading data from or writing data to memory, doing a calculation or logic operating in the ALU, changing the address in the PC, or stopping the program</li></ol></td>
+                
+            </tr>
+        
+    </tbody>
+</table>
+                
+            
+                
+                    <h3>Common CPU Components</h3>
+                
+            
+                
+                    <table class="table table-hover">
+    <thead>
+        <tr>
+            
+                <th>Component</th>
+            
+                <th>Function</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        
+            <tr>
+                
+                    <td>Arithmetic & Logic Unit (ALU)</td>
+                
+                    <td><ul><li>This does all the calculation and logic operations</li> <li>It can do simple addition and subtraction, do multiplication and division using repeated addition/subtraction, and can compare the size of numbers</li> <li>It can also perform logic operations like AND, OR, NOT, and can do binary shifts</li> <li>It contains the accumulator register, where the output of all the ALU's operations is sent</li></ul></td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td>Control Unit (CU)</td>
+                
+                    <td><ul><li>This is in overall control of the CPU</li> <li>It manages the fetch-execute cycle</li> <li>It controls the flow of data inside and outside the CPU</li></ul></td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td>Cache</td>
+                
+                    <td><ul><li>This is very fast memory inside the CPU, which is slower than the registers, but is faster than RAM</li> <li>It stores regularly used data so that the CPU can access it quickly when it's needed</li> <li>They have low capacity and are expensive compared to RAM or Secondary Storage</li> <li>There are 3 levels of cache – L1, L2, & L3. L1 is the quickest with the smallest capacity, while L3 is the slowest with the most capacit.</li></ul></td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td>Registers</td>
+                
+                    <td><ul><li>Memory locations inside the CPU which cab be used to temporarily store tiny bits of data the CPU needs.</li> <li>They are extremely quick to read/write to</li> <li>The most important registers are listed below</li></ul></td>
+                
+            </tr>
+        
+    </tbody>
+</table>
+                
+            
+                
+                    <h3>CPU Registers</h3>
+                
+            
+                
+                    <table class="table table-hover">
+    <thead>
+        <tr>
+            
+                <th>Register</th>
+            
+                <th>Content</th>
+            
+                <th>Purpose</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        
+            <tr>
+                
+                    <td>Memory Address Register (MAR)</td>
+                
+                    <td>Address</td>
+                
+                    <td>This holds any memory address about to be used by the CPU, which might be data or an instruction.</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td>Memory Data Register (MDR)</td>
+                
+                    <td>Data</td>
+                
+                    <td>This holds a data or instruction, which may have been fetched from memory or waiting to be written to memory.</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td>Program Counter (PC)</td>
+                
+                    <td>Address</td>
+                
+                    <td>This keeps track of the memory address of the instruction for each cycle.</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td>Accumulator (ACC)</td>
+                
+                    <td>Data</td>
+                
+                    <td>This stores the result of every calculation in the ALU.</td>
+                
+            </tr>
+        
+    </tbody>
+</table>
+                
+            
+                
+                    <h2>CPU Performance</h2>
+                
+            
+                
+                    <h3>Clock Speed</h3>
+                
+            
+                
+                    <p>Clock speed is the number of instructions a core can execute per second (Hz). This is typically around 3.5 GHz (3 billion instructions per second) for desktop computers. The higher the clock speed, the more instructions that can be executed every second.</p>
+                
+            
+                
+                    <p>Sometimes, CPU's can be overclocked so they run higher than the factory-set clock speed. This can cause CPU's to overheat, which can cause crashes or damage to the system. Cooling systems are required, such as water cooling.</p>
+                
+            
+                
+                    <h3>Cache Size</h3>
+                
+            
+                
+                    <p>Cache is data storage inside the CPU that is much faster than RAM. A bigger cache means that more data the CPU needs to process can be accessed quickly.</p>
+                
+            
+                
+                    <h3>Number of Cores</h3>
+                
+            
+                
+                    <p>Each core in a CPU can process data and instructions separately from the rest. The more cores a CPU has, the more isntructions it can process simultaneously, so the faster it can process data. Most computers have at least 4 cores nowadays.</p>
+                
+            
+                
+                    <p>Multi-core CPU's will only increase performance if a program is designed to use it.</p>
+                
+            
+                
+                    <h2>Embedded Systems</h2>
+                
+            
+                
+                    <p>An embedded system is a computer built into a larger device. They are normally dedicated systems. They are often used for control systems to monitor and control machinery to achieve a desired result.</p>
+                
+            
+                
+                    <p>They are dedicated to do a single task, so they only need to be given enough resources and memory to do this. This makes them cheaper to build. They are usually coded in a low level language like Assembly so they are as efficient as possible.</p>
+                
+            
+                
+                    <p>Embedded systems can be found in many places, such as dishwashers, microwaves, TVs, washing machines, cameras, segways, drones and even Baby Annabell Cry and Poop dolls.</p>
+                
+            
+        </div>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous">
+        </script>
+    </body>
+</html>
