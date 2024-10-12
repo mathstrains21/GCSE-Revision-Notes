@@ -16,3 +16,7 @@
 "English Lanuage":
 - changed-files:
   - any-glob-to-any-file: English Language/**
+
+"Maths":
+- changed-files:
+  - any-glob-to-any-file: Maths/**
