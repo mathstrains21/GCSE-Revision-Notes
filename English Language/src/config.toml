@@ -1,0 +1,53 @@
+exam_board = "Edexcel IGCSE"
+subject = "English Language A"
+code = "4EA1"
+
+[[papers]]
+name = "Non-fiction Texts and Transactional Writing"
+number = 1
+code = "4EA1/01"
+topics = [1.01, 1.02, 1.03, 1.04, 1.05, 1.06, 1.07, 1.08, 1.09, 1.10, 2]
+
+[[topics]]
+title = "The Danger of a Single Story"
+number = 1.01
+
+[[topics]]
+title = "A Passage to Africa"
+number = 1.02
+
+[[topics]]
+title = "The Explorer's Daughter"
+number = 1.03
+
+[[topics]]
+title = "Explorers, or boys messing about? Either way, taxpayer gets rescue bill"
+number = 1.04
+
+[[topics]]
+title = "127 hours: Between a Rock and a Hard Place"
+number = 1.05
+
+[[topics]]
+title = "Young and dyslexic? You've got it going on"
+number = 1.06
+
+[[topics]]
+title = "A game of Polo with a Headless Goat"
+number = 1.07
+
+[[topics]]
+title = "Beyond the Sky and Earth: A Journey into Bhutan"
+number = 1.08
+
+[[topics]]
+title = "H is for Hawk"
+number = 1.09
+
+[[topics]]
+title = "Chinese Cinderella"
+number = 1.10
+
+[[topics]]
+title = "Transactional Writing"
+number = 2

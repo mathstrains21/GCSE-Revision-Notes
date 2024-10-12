@@ -1,14 +1,18 @@
-"Computer Science":
-- changed-files:
-  - any-glob-to-any-file: Computer Science/**
-
-"Github Config":
-- changed-files:
-  - any-glob-to-any-file: .github/**
-
 "App Code":
 - changed-files:
   - any-glob-to-any-file:
     - app/**
     - '*.py'
     - requirements.txt
+
+"Github Config":
+- changed-files:
+  - any-glob-to-any-file: .github/**
+
+"Computer Science":
+- changed-files:
+  - any-glob-to-any-file: Computer Science/**
+
+"English Lanuage":
+- changed-files:
+  - any-glob-to-any-file: English Language/**
