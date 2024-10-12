@@ -57,8 +57,3 @@ number = 2.4
 [[topics]]
 title = "Programming Languages and Integrated Development Environments"
 number = 2.5
-
-
-[style]
-color = "purple"
-colors = ["red", "black", "green", "blue"]
