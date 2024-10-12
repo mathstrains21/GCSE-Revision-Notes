@@ -10,5 +10,5 @@
 - changed-files:
   - any-glob-to-any-file:
     - app/**
-    - *.py
+    - '*.py'
     - requirements.txt
