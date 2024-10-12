@@ -39,7 +39,7 @@ jobs:
         git config user.name "github-actions[bot]"
         git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
     - name: Compile Computer Science Notes
-      if: contains(github.event.pull_request.labels.*.name, 'Computer Science')
+      if: contains(github.event.pull_request.labels.*.name, 'Computer Science') || contains(github.event.pull_request.labels.*.name, 'App Code')
       run: |
         python main.py compile topic "Computer Science"
         git add .
