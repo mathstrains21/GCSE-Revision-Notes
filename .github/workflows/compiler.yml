@@ -43,7 +43,7 @@ jobs:
       run: |
         python main.py compile topic "Computer Science"
         git add .
-        git commit -m "Compile Computer Science Notes"
+        git commit -m "Compile Computer Science Notes" || exit 0
     - name: Git Push
       run: git push
 
