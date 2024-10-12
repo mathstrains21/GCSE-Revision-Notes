@@ -44,6 +44,12 @@ jobs:
         python main.py compile topic "Computer Science"
         git add .
         git commit -m "Compile Computer Science Notes" || exit 0
+    - name: Compile English Language Notes
+      if: contains(github.event.pull_request.labels.*.name, 'English Language') || contains(github.event.pull_request.labels.*.name, 'App Code')
+      run: |
+        python main.py compile topic "English Language"
+        git add .
+        git commit -m "Compile English Language Notes" || exit 0
     - name: Git Push
       run: git push
 
