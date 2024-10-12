@@ -25,7 +25,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
       with:
-        ref: ${{ github.event.pull_request.head.sha }}
+        ref: ${{ github.event.pull_request.head.ref }}
     - name: Set up Python 3.10
       uses: actions/setup-python@v3
       with:
@@ -39,7 +39,7 @@ jobs:
         git config user.name "github-actions[bot]"
         git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
     - name: Compile Computer Science Notes
-      if: contains(github.event.pull_request.labels.*.name, 'Computer Science')
+      if: contains(github.event.pull_request.labels.*.name, 'Computer Science') || contains(github.event.pull_request.labels.*.name, 'App Code')
       run: |
         python main.py compile topic "Computer Science"
         git add .
@@ -58,7 +58,7 @@ jobs:
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
-          github.pulls.createReview({
+          github.rest.pulls.createReview({
             owner: context.repo.owner,
             repo: context.repo.repo,
             pull_number: context.payload.pull_request.number,
