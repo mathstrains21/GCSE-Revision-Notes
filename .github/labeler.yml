@@ -12,3 +12,7 @@
 "Computer Science":
 - changed-files:
   - any-glob-to-any-file: Computer Science/**
+
+"English Lanuage":
+- changed-files:
+  - any-glob-to-any-file: English Language/**
