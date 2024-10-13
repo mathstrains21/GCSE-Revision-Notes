@@ -3,5 +3,11 @@
         {% if item.type == 'text' %}
             {{ item.content }}
         {% endif %}
+        {% if item.type == 'bold' %}
+            <strong>{{ inline(item.content) }}</strong>
+        {% endif %}
+        {% if item.type == 'italic' %}
+            <em>{{ inline(item.content) }}</em>
+        {% endif %}
     {% endfor %}
 {% endmacro %}

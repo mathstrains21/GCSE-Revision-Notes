@@ -1,3 +1,5 @@
+import re
+
 def convert_to_markdown(text: str) -> str:
     return text.strip()
 
@@ -54,4 +56,27 @@ def get_paragraph_data(text: str) -> str:
 
 def get_inline_data(text: str) -> str:
     text = text.strip()
+    if text == '':
+        return []
+    # Bold and Italic
+    if match := re.match(r'(?P<before>.*?)\*\*\*(?P<bold_italic>.*?)\*\*\*(?P<after>.*)', text):
+        return [
+            *get_inline_data(match.group('before')),
+            {"type": "bold", "content": [{"type": "italic", "content": get_inline_data(match.group('bold_italic'))}]},
+            *get_inline_data(match.group('after')),
+        ]
+    # Bold
+    if match := re.match(r'(?P<before>.*?)\*\*(?P<bold>.*?)\*\*(?P<after>.*)', text):
+        return [
+            *get_inline_data(match.group('before')),
+            {"type": "bold", "content": get_inline_data(match.group('bold'))},
+            *get_inline_data(match.group('after')),
+        ]
+    # Italic
+    if match := re.match(r'(?P<before>.*?)\*(?P<italic>.*?)\*(?P<after>.*)', text):
+        return [
+            *get_inline_data(match.group('before')),
+            {"type": "italic", "content": get_inline_data(match.group('italic'))},
+            *get_inline_data(match.group('after')),
+        ]
     return [{"type": "text", "content": text}]
