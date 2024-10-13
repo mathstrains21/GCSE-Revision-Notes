@@ -1,0 +1,13 @@
+{% macro inline(content) %}
+    {% for item in content %}
+        {% if item.type == 'text' %}
+            {{ item.content }}
+        {% elif item.type == 'bold' %}
+            <strong>{{ inline(item.content) }}</strong>
+        {% elif item.type == 'italic' %}
+            <em>{{ inline(item.content) }}</em>
+        {% elif item.type == 'code' %}
+            <code>{{ item.content }}</code>
+        {% endif %}
+    {% endfor %}
+{% endmacro %}

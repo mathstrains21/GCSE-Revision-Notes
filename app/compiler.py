@@ -28,7 +28,16 @@ def compile(subject, topic):
     data = {
         "subject": subject_config,
         "topic": topic_config,
-        "content": [{"type": "heading", "size": 1, "content": topic_config["title"]}],
+        "content": [
+            {
+                "type": "heading",
+                "size": 1,
+                "content": [{
+                        "type": "text",
+                        "content": topic_config["title"],
+                }],
+            },
+        ],
     }
 
     markdown_files = ["# {title}".format(**topic_config)]
@@ -37,8 +46,10 @@ def compile(subject, topic):
         subtopic_file = topic_folder / "{number} {title}.src.md".format(**subtopic)
         with open(subtopic_file) as f:
             subtopic_text = f.read()
+        markdown_files.append("---")
         markdown_files.append(convert_to_markdown(subtopic_text))
 
+        data["content"].append({"type": "hr"})
         data["content"] += get_data(subtopic_text)
 
 
