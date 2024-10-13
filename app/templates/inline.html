@@ -2,12 +2,12 @@
     {% for item in content %}
         {% if item.type == 'text' %}
             {{ item.content }}
-        {% endif %}
-        {% if item.type == 'bold' %}
+        {% elif item.type == 'bold' %}
             <strong>{{ inline(item.content) }}</strong>
-        {% endif %}
-        {% if item.type == 'italic' %}
+        {% elif item.type == 'italic' %}
             <em>{{ inline(item.content) }}</em>
+        {% elif item.type == 'code' %}
+            <code>{{ item.content }}</code>
         {% endif %}
     {% endfor %}
 {% endmacro %}

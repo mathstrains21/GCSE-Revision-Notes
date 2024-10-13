@@ -79,4 +79,11 @@ def get_inline_data(text: str) -> str:
             {"type": "italic", "content": get_inline_data(match.group('italic'))},
             *get_inline_data(match.group('after')),
         ]
+    # Inline Code
+    if match := re.match(r'(?P<before>.*?)`(?P<code>.*?)`(?P<after>.*)', text):
+        return [
+            *get_inline_data(match.group('before')),
+            {"type": "code", "content": match.group('code')},
+            *get_inline_data(match.group('after')),
+        ]
     return [{"type": "text", "content": text}]
