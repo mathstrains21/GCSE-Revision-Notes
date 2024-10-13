@@ -28,7 +28,16 @@ def compile(subject, topic):
     data = {
         "subject": subject_config,
         "topic": topic_config,
-        "content": [{"type": "heading", "size": 1, "content": topic_config["title"]}],
+        "content": [
+            {
+                "type": "heading",
+                "size": 1,
+                "content": [{
+                        "type": "text",
+                        "content": topic_config["title"],
+                }],
+            },
+        ],
     }
 
     markdown_files = ["# {title}".format(**topic_config)]

@@ -1,0 +1,7 @@
+{% macro inline(content) %}
+    {% for item in content %}
+        {% if item.type == 'text' %}
+            {{ item.content }}
+        {% endif %}
+    {% endfor %}
+{% endmacro %}
