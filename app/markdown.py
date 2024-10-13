@@ -11,6 +11,8 @@ def get_section_data(text: str) -> str:
         return get_heading_data(text)
     elif text.startswith('|'):
         return get_table_data(text)
+    elif re.match(r'^([-_*])\1{2,}$', text):
+        return {"type": "hr"}
     else:
         return get_paragraph_data(text)
 

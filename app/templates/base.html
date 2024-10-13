@@ -19,6 +19,8 @@
                     {% include '_heading.html' %}
                 {% elif item.type == 'paragraph' %}
                     {% include '_paragraph.html' %}
+                {% elif item.type == 'hr' %}
+                    <hr>
                 {% elif item.type == 'table' %}
                     {% include '_table.html' %}
                 {% endif %}
