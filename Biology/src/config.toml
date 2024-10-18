@@ -1,0 +1,41 @@
+exam_board = "AQA"
+subject = "Biology"
+code = "8461"
+
+[[papers]]
+number = 1
+code = "8461/1"
+topics = [1, 2, 3, 4]
+
+[[papers]]
+number = 2
+code = "8461/2"
+topics = [5, 6, 7]
+
+[[topics]]
+title = "Cell Biology"
+number = 1
+
+[[topics]]
+title = "Organisation"
+number = 2
+
+[[topics]]
+title = "Infection and Response"
+number = 3
+
+[[topics]]
+title = "Bioenergetics"
+number = 4
+
+[[topics]]
+title = "Homeostasis and Response"
+number = 5
+
+[[topics]]
+title = "Inheritance, Variation and Evolution"
+number = 6
+
+[[topics]]
+title = "Ecology"
+number = 7
