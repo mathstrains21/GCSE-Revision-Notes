@@ -9,6 +9,10 @@
 - changed-files:
   - any-glob-to-any-file: .github/**
 
+"Biology":
+- changed-files:
+  - any-glob-to-any-file: Biology/**
+
 "Computer Science":
 - changed-files:
   - any-glob-to-any-file: Computer Science/**
