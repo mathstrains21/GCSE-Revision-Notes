@@ -1,0 +1,61 @@
+title = "Qui suis-je?"
+number = 1
+
+[vocab]
+tags = ["1: Qui suis-je?"]
+
+[[vocab.vocab]]
+name = "La Famille"
+tags = ["La Famille"]
+
+[[vocab.vocab]]
+name = "Les Adjectifs de Personnalité"
+tags = ["Les Adjectifs de Personnalité"]
+
+[[vocab.vocab]]
+name = "Ma Description Physique"
+tags = ["Ma Description Physique"]
+
+[[vocab.vocab]]
+name = "En Ville"
+tags = ["En Ville"]
+
+[[vocab.vocab]]
+name = "Quand"
+tags = ["Quand?"]
+
+[[vocab.vocab]]
+name = "L'Amitié"
+tags = ["L'Amitié"]
+
+[[vocab.vocab]]
+name = "Les Traits de Personnalité"
+tags = ["Les Traits de Personnalité"]
+
+[[vocab.vocab]]
+name = "On Décrit Un Ami"
+tags = ["On Décrit Un Ami"]
+
+[[vocab.vocab]]
+name = "Les Rapports en Famille"
+tags = ["Les Rapports en Famille"]
+
+[[vocab.vocab]]
+name = "On Décrit Sa Famille"
+tags = ["On Décrit Sa Famille"]
+
+[[vocab.vocab]]
+name = "On Va Sortir"
+tags = ["On Va Sortir"]
+
+[[vocab.vocab]]
+name = "On Décrit Une Sortie"
+tags = ["On Décrit Une Sortie"]
+
+[[vocab.vocab]]
+name = "Parler de Son Enfance"
+tags = ["Parler de Son Enfance"]
+
+[[vocab.vocab]]
+name = "Qui Est-ce Que Tu Admires"
+tags = ["Qui Est-ce Que Tu Admires?"]
