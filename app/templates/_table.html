@@ -2,7 +2,7 @@
     <thead>
         <tr>
             {% for heading in item.head.content %}
-                <th>{{ heading }}</th>
+                <th>{{ inline.inline(heading) }}</th>
             {% endfor %}
         </tr>
     </thead>
@@ -10,7 +10,7 @@
         {% for row in item.body %}
             <tr>
                 {% for cell in row.content %}
-                    <td>{{ cell }}</td>
+                    <td>{{ inline.inline(cell) }}</td>
                 {% endfor %}
             </tr>
         {% endfor %}
